@@ -25,7 +25,7 @@ export default{
     },
     methods: {
         onEnter() {
-            this.toDoList.push(this.inputToDo);
+            this.toDoList.unshift(this.inputToDo);
             this.inputToDo = "";
         }
     },
@@ -33,6 +33,9 @@ export default{
 }
 </script>
 <style>
+body{
+    background-color: #EEEEEE;
+}
 input{
     height: 25%;
     width: 70%;
@@ -51,6 +54,8 @@ input{
 }
 li{
     margin: 1%;
+    font-size: large;
+    font-weight: bold;
 
     display: flex;
     padding-top:3vh;
